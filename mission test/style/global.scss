@@ -1,0 +1,70 @@
+*,ul,ol,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+html {
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 16px;
+    @include respond-above(sm) {
+        font-size: 14px;
+    }
+    @include respond-above(lg) {
+        font-size: 15px;
+    }
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+    }
+
+body {
+    overflow-y: scroll;
+    text-size-adjust: 100%;
+    font-family: $body-font;
+    font-size: $base-font;
+}
+
+a {
+    transition: all ease .3s;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+
+input,
+select,
+textarea,
+button {
+    font: #{$base-font}/$base-line-height $body-font;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+        text-decoration: none;
+    }
+}
